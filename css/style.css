@@ -14,7 +14,7 @@
 }
 
 .clear {
-	clear: both;
+    clear: both;
 }
 
 /******************************************
@@ -22,71 +22,112 @@
 /*******************************************/
 
 body {
-  background-image: url("/imgs/background-home-desktop.jpg");
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
-  background-size: cover;
-  
-  /* background-image: url('https://i.imgur.com/SptbBh7.jpg'); */
-  /* Why isn't the imgur link working */
-}
-
-/* navigation */
-nav{
-  display: flex;
-  align-content: flex-end;
-  justify-content: flex-end;
-  align-items: center;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1.25rem;
-}
-
-nav ul li {
-  list-style: none;
-  display: inline;
-  color: #FFFF;
-}
-
-/* words */
-.middleContainer{
-  border: red solid 1px;
-  margin-top: 08rem;
-  margin-left: 6rem;
-  margin-right: 51.5rem;
-  line-height: 2rem;
-  text-align: justify;
-}
-
-h1{
-  color: #D0D6F9;
-  font-family: 'Barlow Condensed', sans-serif;
-
-}
-
-h2{
-  color: #FFFF;
-  font-size: 7rem;
-  text-transform: uppercase;
-  font-family: 'Bellefair', serif;
-  word-spacing: .5rem;
-
-}
-
-p{
+background-image: url("https://i.imgur.com/rH4PmMo.jpg");
 color: #D0D6F9;
+ font-family: 'Roboto', sans-serif;
+
 }
+
+
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
+
+nav{
+ color: white;
+
+}
+nav ul li {
+list-style: none;
+display: inline-block;
+
 
 }
 
-footer {
+
+.blur{
+  /* backdrop-filter: blur(8px); */
+
 
 }
+/* blur background of image */
+/* :hover ul {
+  text-decoration: underline;
+  color: white;
+} */
 
+/* When hovering over the elements in the li this will allow for the underline */
+
+.container{
+
+  border: 1px solid orange;
+  width:72vh;
+ margin-top: 5rem;
+ margin-left: 8rem;
+}
+
+
+h1{
+font-family: 'Barlow Condensed', sans-serif;
+word-spacing: 1rem;
+text-transform: uppercase;
+
+}
+h2{
+  color: white;
+  font-family: 'Bellefair', serif;
+
+  text-transform: uppercase;
+  font-size: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 100;
+
+}
+p{
+ font-family: 'Barlow', sans-serif;
+ text-align: justify;
+ line-height: 1.5rem;
+ text-transform: none
+  ;
+}
+
+.circle{
+   border-radius: 50%;
+  background-color: #FFFF;
+  height: 15rem;
+  width:  15rem;
+  margin-right: 5rem;
+  margin-top: 14rem;
+  align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'Bellefair', serif;
+  color: #0B0D17;
+  font-size: 2rem;
+  
+ 
+}
+
+.containerholder {
+  height: 80vh;
+    width: 98vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  .navContainer{
+    display: flex;
+    border: 1px solid red;
+    justify-content: flex-end;
+    align-content: center;
+  }
+
+  
 /******************************************
-/* ADDITIONAL STYES
+/* ADDITIONAL STYLES
 /*******************************************/
