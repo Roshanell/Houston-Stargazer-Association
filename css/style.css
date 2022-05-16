@@ -5,16 +5,16 @@
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
-    clear: both;
+  clear: both;
 }
 
 /******************************************
@@ -22,112 +22,228 @@
 /*******************************************/
 
 body {
-background-image: url("https://i.imgur.com/rH4PmMo.jpg");
-color: #D0D6F9;
- font-family: 'Roboto', sans-serif;
-
+  background-image: url("https://i.imgur.com/rH4PmMo.jpg");
+  color: #d0d6f9;
+  font-family: "Roboto", sans-serif;
 }
-
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 
-nav{
- color: white;
-
+nav {
+  color: white;
 }
 nav ul li {
-list-style: none;
-display: inline-block;
-
-
+  list-style: none;
+  display: inline-block;
 }
 
-
-.blur{
-  /* backdrop-filter: blur(8px); */
-
-
+ul li a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  font-family: "Barlow Condensed";
+  font-size: 1rem;
+  color: #ecf0f1;
+  text-transform: uppercase;
+  padding: 4px 0;
+  transition: 0.5s;
 }
-/* blur background of image */
-/* :hover ul {
-  text-decoration: underline;
-  color: white;
-} */
+ul li a::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background: #ff7000;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+ul li a:hover {
+  color: #95a5a6;
+}
+ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 
 /* When hovering over the elements in the li this will allow for the underline */
 
-.container{
-
-  border: 1px solid orange;
-  width:72vh;
- margin-top: 5rem;
- margin-left: 8rem;
+.container {
+  /* border: 1px solid orange; */
+  width: 72vh;
+  margin-top: 5rem;
+  margin-left: 8rem;
 }
 
-
-h1{
-font-family: 'Barlow Condensed', sans-serif;
-word-spacing: 1rem;
-text-transform: uppercase;
-
+.containerholder {
+  height: 80vh;
+  width: 98vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
 }
-h2{
+
+.navContainer {
+  display: flex;
+  border: 1px solid red;
+  justify-content: flex-start;
+  align-content: center;
+  width: 50vw;
+  background-color: rgba(151, 151, 151, 0.25);
+  /* background: transparent; */
+}
+
+.navContainerLine {
+  width: 45vw;
+  /* display: flex; */
+  border-bottom: #979797 solid 1px;
+}
+
+.navContainer li {
+  padding: 5px;
+  letter-spacing: 3px;
+  color: #ffff;
+}
+
+.navContainerHolder {
+  /* border: blue 1px solid; */
+  display: flex;
+  align-items: center;
+}
+
+.navContainerHolder img {
+  padding-right: 20px;
+}
+
+.wordContainer {
+  position: relative;
+  color: #ffffff;
+  width: 100%;
+}
+
+/* other */
+h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  word-spacing: 1rem;
+  text-transform: uppercase;
+}
+h2 {
   color: white;
-  font-family: 'Bellefair', serif;
-
+  font-family: "Bellefair", serif;
   text-transform: uppercase;
   font-size: 10rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: 100;
-
 }
-p{
- font-family: 'Barlow', sans-serif;
- text-align: justify;
- line-height: 1.5rem;
- text-transform: none
-  ;
+p {
+  font-family: "Barlow", sans-serif;
+  text-align: justify;
+  line-height: 2rem;
+  text-transform: none;
+  font-size: 1.25rem;
 }
 
-.circle{
-   border-radius: 50%;
-  background-color: #FFFF;
+/* circle */
+
+.circle {
+  border-radius: 50%;
+  background-color: #ffff;
   height: 15rem;
-  width:  15rem;
+  width: 15rem;
   margin-right: 5rem;
   margin-top: 14rem;
-  align-items: center; 
+  align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-family: 'Bellefair', serif;
-  color: #0B0D17;
+  font-family: "Bellefair", serif;
+  color: #0b0d17;
   font-size: 2rem;
-  
- 
 }
 
-.containerholder {
-  height: 80vh;
-    width: 98vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
-  }
+.circle a {
+  text-decoration: none;
+  color: #0b0d17;
+}
 
-  .navContainer{
-    display: flex;
-    border: 1px solid red;
-    justify-content: flex-end;
-    align-content: center;
-  }
-
-  
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+
+ }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+
+}
+ 
+@media all and (min-width: 480px) and (max-width: 768px) { 
+
+}
+ 
+@media all and (max-width: 480px) { 
+  .navContainerHolder{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+      
+}
+.logo{
+  /* display:none; */
+}
+.navContainerLine{
+display: none;
+}
+
+.container{
+  margin-top: 0rem;
+  margin-left: 13rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-content: space-evenly;
+  margin-top: -20%;
+}
+
+h1{
+font-size: 2rem;
+}
+
+h2 {
+ 
+  font-size: 5rem;
+ 
+}
+
+.containerholder{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.circle{
+margin-top: 1rem;
+}
+
+p{
+  margin-right: 17rem;
+
+}
+body{
+
+
+background-image: url("https://i.imgur.com/SptbBh7.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+}
